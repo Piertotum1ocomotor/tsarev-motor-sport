@@ -193,3 +193,301 @@ h1,h2,h3{letter-spacing:-.035em;font-weight:700}
  .hotspot-panel p{font-size:11px}.hotspot-panel h2{font-size:17px}
 }
 @media(max-width:370px){.contact-phones>div>a{font-size:18px}}
+/* A shared first screen for booking, service selection and workshop benefits. */
+.hero-shell {
+  background: #eeede7;
+  border-bottom: 1px solid #dad9d0;
+}
+.hero-shell .hero {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  grid-template-areas: "intro map" "benefits benefits";
+  align-items: center;
+  gap: 24px clamp(24px, 4vw, 64px);
+  min-height: 0;
+  padding-block: 38px 0;
+}
+.hero-shell .hero-content {
+  grid-area: intro;
+  min-width: 0;
+  padding: 0;
+}
+.hero-shell .hero-content > .eyebrow {
+  margin-bottom: 16px;
+  font-size: 13px;
+  letter-spacing: .1em;
+}
+.hero-shell h1 {
+  font-size: clamp(44px, 4.9vw, 70px);
+  line-height: 1.02;
+}
+.hero-shell .hero-lead {
+  margin-top: 18px;
+  font-size: 17px;
+  line-height: 1.55;
+  max-width: 41ch;
+}
+.hero-shell .hero-lead a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.hero-shell .hero-lead a:hover { color: var(--red-dark); }
+.hero-shell .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-top: 22px;
+}
+.hero-shell .hero-actions > .button {
+  width: auto;
+  font-size: 15px;
+  min-height: 50px;
+  padding: 12px 18px;
+  gap: 20px;
+}
+.hero-shell .hero-phone {
+  margin: 0;
+  font-size: 17px;
+}
+.hero-shell .hero-phone > span {
+  font-size: 13px;
+  white-space: normal;
+}
+.hero-estimate {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  margin-top: 5px;
+  color: var(--red-dark);
+  font-size: 15px;
+  font-weight: 650;
+}
+.hero-estimate:hover { text-decoration: underline; }
+.hero-shell .hero-addresses {
+  margin-top: 3px;
+  gap: 0;
+  max-width: none;
+}
+.hero-shell .hero-addresses > a {
+  min-height: 44px;
+  width: fit-content;
+  font-size: 14px;
+}
+.hero-shell .hero-addresses svg { flex: none; }
+
+.hero-shell .car-map {
+  grid-area: map;
+  scroll-margin-top: 16px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas: "caption caption" "car service";
+  align-items: center;
+  gap: 9px clamp(14px, 2vw, 30px);
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  margin: 0;
+  overflow: visible;
+  background: transparent;
+  border-radius: 0;
+}
+.hero-shell .map-caption {
+  grid-area: caption;
+  position: static;
+  display: block;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d1d0c7;
+}
+.hero-vehicle {
+  grid-area: car;
+  display: grid;
+  place-items: center;
+  position: relative;
+  min-width: 0;
+}
+.hero-shell .car-stage {
+  position: relative;
+  inset: auto;
+  width: min(100%, 260px);
+  height: auto;
+  aspect-ratio: 2 / 3;
+  transform: none;
+}
+.hero-shell .car-stage > img { display: block; }
+.hero-shell .hotspot-panel {
+  grid-area: service;
+  position: static;
+  width: auto;
+  min-width: 0;
+  min-height: 245px;
+  padding: 8px 0 8px 18px;
+  border: 0;
+  border-left: 1px solid #d1d0c7;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+.hero-shell .hotspot-panel .micro { font-size: 13px; }
+.hero-shell .hotspot-panel h2 {
+  font-size: clamp(19px, 1.7vw, 25px);
+  line-height: 1.2;
+  margin-top: 8px;
+}
+.hero-shell .hotspot-panel p {
+  display: block;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-top: 9px;
+}
+.hero-shell .hotspot-panel strong {
+  font-size: 20px;
+  margin-top: 12px;
+}
+.hero-shell .hotspot-panel > a {
+  position: static;
+  font-size: 15px;
+  min-height: 44px;
+  margin-top: 9px;
+  padding: 0;
+  border: 0;
+  color: var(--red-dark);
+  justify-content: flex-start;
+  gap: 9px;
+}
+.hero-shell .hotspot-panel > a:hover { text-decoration: underline; }
+.hero-shell .hotspot-label { font-size: 13px; }
+.hero-benefits {
+  grid-area: benefits;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid #d1d0c7;
+}
+.hero-benefits li { padding: 19px 22px; }
+.hero-benefits li:first-child { padding-left: 0; }
+.hero-benefits li + li { border-left: 1px solid #d1d0c7; }
+.hero-benefits strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.hero-benefits span {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+@media (max-width: 820px) {
+  .hero-shell .hero {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "intro" "benefits" "map";
+    padding-block: 28px;
+    gap: 19px;
+  }
+  .hero-shell h1 { font-size: clamp(39px, 9vw, 56px); }
+  .hero-shell .hero-lead { font-size: 16px; }
+  .hero-shell .car-stage { width: min(100%, 225px); }
+  .hero-shell .hotspot-panel { min-height: 0; }
+}
+@media (max-width: 540px) {
+  .hero-shell .hero { padding-block: 24px; }
+  .hero-shell .hero-actions { margin-top: 16px; }
+  .hero-shell .hero-actions > .button { padding-inline: 13px; gap: 10px; }
+  .hero-shell .hero-phone { font-size: 16px; }
+  .hero-shell .hero-phone > span { font-size: 13px; }
+  .hero-benefits { grid-template-columns: minmax(0, 1fr); }
+  .hero-benefits li, .hero-benefits li:first-child { padding: 10px 0 10px 17px; position: relative; }
+  .hero-benefits li + li { border-left: 0; border-top: 1px solid #d1d0c7; }
+  .hero-benefits li::before {
+    content: "";
+    position: absolute;
+    inset: 17px auto auto 0;
+    width: 6px;
+    height: 6px;
+    background: var(--red);
+  }
+  .hero-benefits strong { font-size: 17px; }
+  .hero-benefits span { margin-top: 3px; }
+  .hero-shell .car-map {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "caption" "car" "service";
+    gap: 7px;
+  }
+  .hero-vehicle { height: 188px; }
+  .hero-shell .car-stage {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: min(180px, 53vw);
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  .hero-shell .hotspot-panel {
+    padding: 12px 0 0;
+    border-left: 0;
+    border-top: 1px solid #d1d0c7;
+  }
+  .hero-shell .hotspot-panel > a { margin-top: 3px; }
+}
+
+/* Keep labels, prices and controls readable across the existing pages. */
+.eyebrow, .micro, .breadcrumb, .header-places, .header-places > span,
+.header-phone > span, .menu-scroll > .eyebrow, .menu-bottom > span,
+.menu-bottom > p, .footer-row > p, .footer-row nav a,
+.workshop-proof figcaption, .workshop-stats span, .contact-phones > div > span {
+  font-size: 13px;
+}
+.basic-nav, .service-nav, .service-nav > a, .button, .text-link,
+.catalog-tabs > a, .menu-secondary a, .mobile-action > a, .mobile-action > button {
+  font-size: 14px;
+}
+.section-head > .button, .compact-promo > .button, .closing-copy > .button,
+.detail-hero .button, .form-submit > .button, .estimate-form .form-submit > .button,
+.catalog-group .section-head > .text-link, .contact-card > .text-link {
+  font-size: 14px;
+}
+.basic-nav { gap: clamp(12px, 1.3vw, 23px); }
+.service-nav { gap: clamp(14px, 2vw, 28px); }
+.header-places { margin-left: 0; }
+.card-price, .card-number, .direction-copy p,
+.estimate-category small, .estimate-work-heading > span, .estimate-total > span,
+.estimate-summary-top > .eyebrow, .estimate-selected li, .gallery-hint {
+  font-size: 13px;
+}
+.direction-copy p { opacity: .94; }
+.small-note, .catalog-note, .form-submit p, .field-error, .form-result p,
+.estimate-help, .estimate-alternative, .estimate-note, .estimate-hours p,
+.estimate-combination, .estimate-hourly-note, .estimate-breakdown summary,
+.request-form .form-fields > label, .estimate-form .form-fields > label {
+  font-size: 14px;
+}
+.estimate-choice > span:first-child, .estimate-choice > strong,
+.estimate-category > span, .estimate-step, .price-rows > a,
+.price-rows > a > strong, .service-card-copy p, .detail-composition p,
+.preparation-grid p, .service-steps p, .workshop-terms dd, .faq-list p {
+  font-size: 15px;
+}
+.catalog-search > input, .request-form .form-fields input,
+.request-form .form-fields select, .request-form .form-fields textarea {
+  font-size: 16px;
+}
+.estimate-form .form-fields input, .estimate-form .form-fields select {
+  font-size: 15px;
+}
+@media (max-width: 700px) {
+  .contact-phones { gap: 10px; }
+  .contact-phones > div > a { font-size: clamp(15px, 4.3vw, 18px); }
+  .estimate-work-heading > span { max-width: none; }
+  .estimate-category { min-height: 68px; }
+}
