@@ -665,3 +665,47 @@ h1,h2,h3{letter-spacing:-.035em;font-weight:700}
   .estimate-quick-price { font-size: 13px; letter-spacing: -.035em; }
   .estimate-quick-mark { width: 18px; height: 18px; font-size: 17px; }
 }
+
+/* Increase the small text and controls on narrow screens. */
+@media (max-width: 700px) {
+  .brand small { font-size: 8px; }
+  .eyebrow, .micro, .breadcrumb, .hero-shell .hero-phone > span,
+  .contact-top > .eyebrow, .closing-copy > .eyebrow, .booking-dialog .eyebrow,
+  .card-number, .contact-phones > div > span,
+  .workshop-proof figcaption, .workshop-stats span, .gallery-hint,
+  .footer-row > p, .footer-row nav a {
+    font-size: 14px;
+  }
+
+  .button, .text-link, .section-head > .button, .compact-promo > .button,
+  .closing-copy > .button, .detail-hero .button, .form-submit > .button,
+  .estimate-form .form-submit > .button, .contact-card > .text-link,
+  .catalog-group .section-head > .text-link, .catalog-tabs > a,
+  .menu-secondary a, .mobile-action > a, .mobile-action > button,
+  .card-price, .direction-copy p, .estimate-category small,
+  .estimate-quick-service, .estimate-quick-price, .estimate-work-heading > span,
+  .estimate-help, .estimate-help > span, .estimate-help > p, .estimate-help > .text-link,
+  .estimate-note, .estimate-alternative, .estimate-hours p, .estimate-combination,
+  .estimate-hourly-note, .estimate-breakdown summary, .small-note, .catalog-note,
+  .form-submit p, .form-result p, .field-error, .compact-promo p,
+  .request-form .form-fields > label, .estimate-form .form-fields > label,
+  #estimate .estimate-summary-top > .text-link, #estimate .estimate-total > span,
+  #estimate .estimate-selected li > span, #estimate .estimate-selected li > strong {
+    font-size: 15px;
+  }
+
+  .hero-benefits span, .section-head > p, .page-heading .section-head > p,
+  .section-head > div > p:not(.eyebrow), .hotspot-panel > p, .closing-copy > p,
+  .estimate-quick > strong, .estimate-choice > span:first-child, .estimate-choice > strong,
+  .estimate-category > span, .estimate-step, .price-rows > a, .price-rows > a > strong,
+  .service-card-copy p, .detail-composition p, .preparation-grid p,
+  .service-steps p, .workshop-terms dd, .faq-list summary, .faq-list details > p,
+  .estimate-form .form-fields input, .estimate-form .form-fields select,
+  #estimate .estimate-hours > label, #estimate .estimate-hours > select {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .estimate-quick-price { font-size: 14px; }
+}
